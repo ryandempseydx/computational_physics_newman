@@ -1,0 +1,10 @@
+# Ignore compiled bytecode files
+__pycache__/
+*.py[cod]
+
+#Ignore local environment folders if stored in project
+env/
+.conda/
+
+#Ignore transient system logs
+*.log
