@@ -1,9 +1,15 @@
-h = float(input("Enter the height of the tower: ")) 
+import numpy as np
 
-t = float(input("Enter the time interval: ")) 
+# Constants
+g = 9.81  # Acceleration due to gravity (m/s^2)
 
-s = 9.81*t**2/2 
- 
-print("The height of the ball is",h-s,"meters")
+# Input parameters
+h = float(input("Enter the height of the tower in meters: "))
 
-print("This is the newest version")
+# Safety check for negative heights
+if h < 0:
+    print("\nError: Height cannot be negative!")
+else:
+    # Kinematic calculation: t = sqrt(2h / g)
+    t = np.sqrt((2 * h) / g)
+    print(f"\nThe ball will hit the ground after {t:.2f} seconds.")
